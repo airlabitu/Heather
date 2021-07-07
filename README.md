@@ -17,6 +17,7 @@ This repository holds the code resources for the project, and a guide of how to 
 - A painting by Mai Hartmann
 - Conductive ink, tape, jumper cables etc.
 
+
 ## The setup
 
 ### Raspberry Pi
@@ -27,6 +28,7 @@ This repository holds the code resources for the project, and a guide of how to 
 
 ### Arduino Vibration motor
 - The Raspberry Pi sends vibration commands to this Arduino, that then makes the motor vibrate.
+
 
 ## Setting up the Raspberry Pi
 Start with a new and updated version of the Raspberry Pi OS. Connect the screen, mouse, kayboard, and the two Arduinos to the Raspberry Pi, then boot it up.
