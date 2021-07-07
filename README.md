@@ -36,4 +36,11 @@ Download the Processing files from this repository in the folder Heather_Process
 
 Install Processing using this command in a terminal vwindow:  **curl https://processing.org/download/install-arm.sh | sudo sh**
 
+Make the sketch start with the OS by opening the autostart file with: **sudo nano /etc/xdg/lxsession/LXDE-pi/autostart**
+Then adding the following line to the bottom of the autostart document: **@processing-java --sketch=/home/Desktop/Heather_Processing_final --run**
+Then close and save the document: ctrl+x then shift+y
 
+To be able to increase the volume a bit more, install the PulseAudio controls GUI with: **sudo apt-get install pavucontrol paprefs**
+Then go to: **Menu->Sound & Video -> PulseAudio Volume Control**
+Here you adjust the **Analog Output** under **Output Devices**
+- We also adjusted the volume settings in the Alsamixer, but that was before trying this. In case that is necessary, type alsamixer in a terminal window, and make sure the analog output is turned all the way up.
