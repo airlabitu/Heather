@@ -27,20 +27,24 @@ This repository holds the code resources for the project, and a guide of how to 
 - This arduino takes care of sending touch data to the Raspberry Pi.
 
 ### Arduino Vibration motor
-- The Raspberry Pi sends vibration commands to this Arduino, that then makes the motot vibrate.
+- The Raspberry Pi sends vibration commands to this Arduino, that then makes the motor vibrate.
 
 ## Setting up the Raspberry Pi
-Start with a new and updated version of the Raspberry Pi OS. Connect the screen, mouse, kayboard, and the two Arduinos to the Raspberry Pi, the boot it up.
+Start with a new and updated version of the Raspberry Pi OS. Connect the screen, mouse, kayboard, and the two Arduinos to the Raspberry Pi, then boot it up.
 
-Download the Processing files from this repository in the folder Heather_Processing_final, and move them to the desktop of the Raspberry Pi.
+Download the Processing files from this repository in the folder **Heather_Processing_final**, and move them to the desktop of the Raspberry Pi.
 
 Install Processing using this command in a terminal vwindow:  **curl https://processing.org/download/install-arm.sh | sudo sh**
 
-Make the sketch start with the OS by opening the autostart file with: **sudo nano /etc/xdg/lxsession/LXDE-pi/autostart**
-Then adding the following line to the bottom of the autostart document: **@processing-java --sketch=/home/Desktop/Heather_Processing_final --run**
-Then close and save the document: ctrl+x then shift+y
+### Make the sketch start with the OS
+- Opening the autostart file with: **sudo nano /etc/xdg/lxsession/LXDE-pi/autostart**
+- Add the following line to the bottom of the autostart document: **@processing-java --sketch=/home/Desktop/Heather_Processing_final --run**
+- Then close and save the document: **ctrl+x** then **shift+y**
 
-To be able to increase the volume a bit more, install the PulseAudio controls GUI with: **sudo apt-get install pavucontrol paprefs**
-Then go to: **Menu->Sound & Video -> PulseAudio Volume Control**
-Here you adjust the **Analog Output** under **Output Devices**
-- We also adjusted the volume settings in the Alsamixer, but that was before trying this. In case that is necessary, type alsamixer in a terminal window, and make sure the analog output is turned all the way up.
+### Increase the volume
+The code exploits the volume capabilities of the standard setup to its max, os in order to be able to increase the volume a bit more, do the following.
+- Install the PulseAudio controls GUI with: **sudo apt-get install pavucontrol paprefs**
+- Then go to: **Menu->Sound & Video -> PulseAudio Volume Control**
+- Here you adjust the **Analog Output** under **Output Devices**
+
+**NB:** We also adjusted the volume settings in the Alsamixer, but that was before trying with the PulseAudop GUI controls. In case that is necessary, type **alsamixer** in a terminal window, to open a terminal GUI for Alsa, and make sure the analog output is turned all the way up.
