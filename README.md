@@ -31,7 +31,7 @@ This repository holds the code resources for the project, and a guide of how to 
 
 
 ## Setting up the Raspberry Pi
-Start with a new and updated version of the Raspberry Pi OS. Connect the screen, mouse, kayboard, and the two Arduinos to the Raspberry Pi, then boot it up.
+Start with a new and updated version of the Raspberry Pi OS. Connect the screen, mouse, kayboard, headphones, and the two Arduinos to the Raspberry Pi, then boot it up.
 
 Download the Processing files from this repository in the folder **Heather_Processing_final**, and move them to the desktop of the Raspberry Pi.
 
@@ -49,3 +49,5 @@ The code exploits the volume capabilities of the standard setup to its max, os i
 - Here you adjust the **Analog Output** under **Output Devices**
 
 **NB:** We also adjusted the volume settings in the Alsamixer, but that was before trying with the PulseAudop GUI controls. In case that is necessary, type **alsamixer** in a terminal window, to open a terminal GUI for Alsa, and make sure the analog output is turned all the way up.
+
+Now restart the Pi, and hopefully everything just works :-)
