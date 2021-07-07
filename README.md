@@ -1,6 +1,7 @@
 # Heather
 
-## Resources for the Heather project. A master thesis project by Mai Hartmann
+## Resources for the Heather project. 
+A master thesis project by Mai Hartmann.
 
 This repository holds the code resources for the project, and a guide of how to setup the Raspberry Pi whish runs the project, together with two Arduino's. It is not a total rundown of the project, and how it was made. :-/
 
