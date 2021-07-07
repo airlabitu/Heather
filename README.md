@@ -50,4 +50,5 @@ The code exploits the volume capabilities of the standard setup to its max, os i
 
 **NB:** We also adjusted the volume settings in the Alsamixer, but that was before trying with the PulseAudop GUI controls. In case that is necessary, type **alsamixer** in a terminal window, to open a terminal GUI for Alsa, and make sure the analog output is turned all the way up.
 
+-----------------------------------------------------------
 Now restart the Pi, and hopefully everything just works :-)
