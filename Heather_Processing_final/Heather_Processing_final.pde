@@ -40,16 +40,16 @@ void setup() {
   
   
   //Inlcude Soundfile object
-  //file3 = new SoundFile(this, "emeraldRush_mono.wav");
+  file3 = new SoundFile(this, "emeraldRush_mono.wav");
   //file3 = new SoundFile(this, "tests/Nautilus.wav");
-  file3 = new SoundFile(this, "tests/livetest_mono.wav");
+  //file3 = new SoundFile(this, "tests/livetest_mono.wav");
 
   //Loop the playback of the file
   file3.loop();
 
   //Start sound manipulators/filters
-  //lowpass = new LowPass(this);
-  //lowpass.process(file3);
+  lowpass = new LowPass(this);
+  lowpass.process(file3);
   
   String portName1 = "/dev/ttyACM0", portName2 = "/dev/ttyACM1";
   for (int i = 0; i < Serial.list().length; i++) {
@@ -65,12 +65,12 @@ void setup() {
 
 void draw() {
   //the dynamic values we use to manipulate the sound
-  //lowpass_value = constrain(map(sensorValue[0], 139.0, 20.0, 200.0, 5000.0), 200.0, 5000.0);
+  lowpass_value = constrain(map(sensorValue[0], 139.0, 20.0, 200.0, 5000.0), 200.0, 5000.0);
   volume_value = constrain(map(sensorValue[1], 114.0, 20.0, 0.15, 2.0), 0.15, 1.0);
   pan_value = constrain(map(sensorValue[2], 136, 36.0, -0.7, 0.7), -0.7, 0.7);
   
   // Effect settings
-  //lowpass.freq(lowpass_value);
+  lowpass.freq(lowpass_value);
   file3.amp(volume_value);
   //file3.amp(1); // for testing max volume
   file3.pan(pan_value);
